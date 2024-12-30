@@ -1,0 +1,46 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Random Color Button</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+            }
+            button {
+                padding: 20px 40px;
+                font-size: 20px;
+                cursor: pointer;
+                border: none;
+                border-radius: 8px;
+                transition: background-color 0.3s;
+            }
+        </style>
+    </head>
+    <body>
+        <button onclick="changeColor()">Click Me</button>
+    
+        <script>
+        
+            const colors = [
+                "#FF5733", "#33FF57", "#3357FF", "#FF33F6", "#FF8C33", 
+                "#33FFC5", "#C533FF", "#FF3333", "#C5FF33", "#57FF33", 
+                "#5733FF", "#FF5733", "#FF3030", "#33FF9D", "#FF6347"
+            ];
+    
+            
+            function changeColor() {
+                const randomIndex = Math.floor(Math.random() * colors.length);
+                document.body.style.backgroundColor = colors[randomIndex];
+            }
+        </script>
+    </body>
+    </html>
+    
